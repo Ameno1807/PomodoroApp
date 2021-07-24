@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), StopwatchListener, LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onAppBackgrounded() {
-        if (timerState != -1) {
+        if (timerState != -1 && stopwatches.size != 0) {
             val startIntent = Intent(this, ForegroundService::class.java)
             startIntent.putExtra(COMMAND_ID, COMMAND_START)
             val currentTimer = stopwatches.find { it.id == timerState }
