@@ -19,16 +19,14 @@ class StopwatchViewHolder(
     private var timer: CountDownTimer? = null
 
     fun bind(stopwatch: Stopwatch) {
+
         if (stopwatch.currentMs == -1L) {
-            binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
-                R.color.red_light
-            ))
-            binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
-                R.color.red_light
-            ))
-        } else  binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
-            R.color.white
-        ))
+            binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.red_light))
+            binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.red_light))
+        } else {
+            binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.white))
+            binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.white))
+        }
 
         if (stopwatch.isStarted) {
             startTimer(stopwatch)
@@ -83,12 +81,8 @@ class StopwatchViewHolder(
                     stopwatch.currentMs = 0
                     binding.stopwatchTimer.text = stopwatch.currentMs.displayTime()
                     stopwatch.currentMs = -1L
-                    binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
-                        R.color.red_light
-                    ))
-                    binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
-                       R.color.red_light
-                   ))
+                    binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.red_light))
+                    binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context, R.color.red_light))
                 }
             }
 
