@@ -23,6 +23,9 @@ class StopwatchViewHolder(
             binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
                 R.color.red_light
             ))
+            binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
+                R.color.red_light
+            ))
         } else  binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
             R.color.white
         ))
@@ -83,6 +86,9 @@ class StopwatchViewHolder(
                     binding.consMain.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
                         R.color.red_light
                     ))
+                    binding.deleteButton.setBackgroundColor(ContextCompat.getColor(binding.consMain.context,
+                       R.color.red_light
+                   ))
                 }
             }
 
@@ -93,8 +99,6 @@ class StopwatchViewHolder(
     }
 
     private companion object {
-
-        private const val START_TIME = "00:00:00:00"
         private const val UNIT_TEN_MS = 100L
         private const val PERIOD  = 1000L * 60L * 60L * 24L // Day
     }
