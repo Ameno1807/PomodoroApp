@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="add_stopwatch">Add Stopwatch</string>
+    <string name="start">Start</string>
+    <string name="timer">Таймер</string>
+    <string name="time_is_up">Таймер завершен</string>
+</resources>
