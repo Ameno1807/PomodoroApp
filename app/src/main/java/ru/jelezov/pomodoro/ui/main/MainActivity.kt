@@ -121,8 +121,4 @@ class MainActivity : AppCompatActivity(), StopwatchListener, LifecycleObserver {
         timePicker.show(supportFragmentManager, "time_picker")
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 }
